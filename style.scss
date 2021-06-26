@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bolder;
+    .Home{
+        border: 2px solid black;
+        height: 600px;
+        background-image: url("https://i.postimg.cc/MKS8z422/download.jpg");
+        background-repeat:no-repeat ;
+        background-size: cover;
+    }
+    nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+        background:linear-gradient(gray,white);
+        opacity: 0.5;
+
+        div{
+            margin: 2%;
+            &:hover{
+                color: rgb(28, 91, 151);
+                text-decoration: underline;
+                font-weight: bolder;
+                
+            }
+            
+        }
+    }
+
+    div{
+        text-align: center;
+        color: white;
+        background-color: rgb(75, 77, 74);
+        ul{
+            text-align: left;
+        }
+    }
+}
