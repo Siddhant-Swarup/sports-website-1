@@ -1,16 +1,16 @@
+
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyC7hT0tHLl0qOPxRU9k0DdrqCz0KOM37sw",
-    authDomain: "database-b8ffb.firebaseapp.com",
-    databaseURL: "https://database-b8ffb-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "database-b8ffb",
-    storageBucket: "database-b8ffb.appspot.com",
-    messagingSenderId: "1015425565984",
-    appId: "1:1015425565984:web:4782b90e2dbd23bb254345"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
+    apiKey: "AIzaSyDu6N5BWyG8ydE0o-5b1Q2Rrkc6Er6YYek",
+    authDomain: "databas2-3e2e5.firebaseapp.com",
+    databaseURL: "https://databas2-3e2e5-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "databas2-3e2e5",
+    storageBucket: "databas2-3e2e5.appspot.com",
+    messagingSenderId: "1025506697785",
+    appId: "1:1025506697785:web:3013987806039f42aee3e8"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
 var selection = document.querySelector('select');
 
@@ -23,15 +23,17 @@ selection.addEventListener('change', () => {
     
 });
 
+
+
 function readResult(value) {
     var result=firebase.database().ref().child(value);
-    result.on('value',(data) => {
-        
-        console.log(data.val())
-        document.getElementById('Object').innerHTML="Loading";
-        document.getElementById("Object").innerHTML= data.val();
+    result.on('value',snap => {
+        console.log(snap.val());
+        document.getElementById('Object').innerText=snap.val();
     });
     
 }
+
+
 
 
